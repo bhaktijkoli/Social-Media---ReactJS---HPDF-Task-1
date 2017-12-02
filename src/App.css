@@ -2,9 +2,95 @@
   font-family: 'Roboto', sans-serif;
 }
 body {
+  background-color: aliceblue;
   margin: 0px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  overflow-x: hidden;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h1 {
+  font-size: 3em;
+}
+h3 {
+  font-size: 1.6em;
+  line-height: 1.4em;
+}
+
 
 .pull-right {
   float: right;
+}
+
+.main-content {
+  margin-top: 10px;
+}
+
+
+/* Layouts */
+.sidebar-component {
+  margin-bottom: 10px;
+}
+
+/* Profile */
+.profile-info-banner {
+  background-color: aqua;
+  height: 60px;
+}
+.profile-avatar {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+.profile-content {
+  margin-top: 40px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.profile-content .profile-name {
+  line-height: 20px;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.profile-content .profile-address {
+  color: #657786;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.profile-content .profile-action {
+  width: 100%;
+  display: inline-flex;
+}
+.profile-content .profile-followers{
+  width: 50%;
+  height: auto;
+  color:#657786;
+}
+.profile-content .profile-followers{
+  font-weight: bold;
+  width: 50%;
+  height: auto;
+  color:#657786;
+}
+.profile-content .profile-followers .profile-count{
+  font-size: 1rem;
+  color: rgb(0, 188, 212);
 }
