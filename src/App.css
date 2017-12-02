@@ -4,3 +4,7 @@
 body {
   margin: 0px;
 }
+
+.pull-right {
+  float: right;
+}

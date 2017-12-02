@@ -1,27 +1,36 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import {AppBar, ToolbarGroup, FlatButton} from 'material-ui';
+import {AppBar, FlatButton, IconButton, IconMenu, MenuItem, Avatar} from 'material-ui';
 
 import './Header.css'
 
 class Header extends Component {
   render() {
     const rightButtons = (
-      <div className="nav-right container">
-        <FlatButton label="Home" className="nav-btn"/>
-        <FlatButton label="About" className="nav-btn"/>
-      </div>
-    );
+      <div className="container">
+        <div className="appbar-links">
+          <Link to="/"><FlatButton label="Home" className="appbar-btn"/></Link>
+          <Link to="/search"><FlatButton label="Search" className="appbar-btn"/></Link>
+          <Link to="/about"><FlatButton label="About" className="appbar-btn"/></Link>
+          <IconMenu className="pull-right"iconButtonElement={<IconButton className="appbar-btn"><Avatar src="http://via.placeholder.com/40x40" /></IconButton>}>
+              <MenuItem primaryText="Refresh" />
+              <MenuItem primaryText="Send feedback" />
+              <MenuItem primaryText="Settings" />
+              <MenuItem primaryText="Help" />
+              <MenuItem primaryText="Sign out" />
+            </IconMenu>
+          </div>
+        </div>
+      );
 
-    return (
-      <AppBar
-        title="Social Media"
-        showMenuIconButton={false}
-        iconElementRight={rightButtons}
-      />
-    );
+      return (
+        <AppBar
+          title={rightButtons}
+          showMenuIconButton={false}
+        />
+      );
+    }
   }
-}
 
-export default Header;
+  export default Header;

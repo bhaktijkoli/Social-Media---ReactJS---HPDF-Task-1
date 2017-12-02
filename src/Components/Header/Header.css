@@ -1,4 +1,7 @@
-.nav-btn {
+.appbar-btn {
   color: white !important;
   top: 5px;
+}
+.appbar-links {
+  margin-top: -5px;
 }
