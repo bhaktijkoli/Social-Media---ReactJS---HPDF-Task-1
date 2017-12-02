@@ -7,13 +7,16 @@ import Home from './Components/Home/Home.jsx';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import './App.css';
+import './bootstrap-grid.css';
 
 class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <Header/>
-        <Route exact path="/" component={Home}/>
+        <div>
+          <Header/>
+          <Route exact path="/" component={Home}/>
+        </div>
       </MuiThemeProvider>
     );
   }
