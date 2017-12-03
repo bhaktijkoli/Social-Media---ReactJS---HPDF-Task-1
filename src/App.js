@@ -9,6 +9,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './App.css';
 import './bootstrap-grid.css';
 
+import './data'
+
 class App extends Component {
   render() {
     return (
