@@ -22,11 +22,13 @@ h6 {
 h1 {
   font-size: 3em;
 }
-h3 {
+h2 {
   font-size: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
   line-height: 1.4em;
 }
-
 
 .pull-right {
   float: right;
@@ -36,6 +38,12 @@ h3 {
   margin-top: 10px;
 }
 
+.card-header {
+}
+
+.card-text {
+  padding-top: 0px !important;
+}
 
 /* Layouts */
 .sidebar-component {
@@ -91,6 +99,32 @@ h3 {
   color:#657786;
 }
 .profile-content .profile-followers .profile-count{
-  font-size: 1rem;
+  font-size: 1.2em;
   color: rgb(0, 188, 212);
+}
+
+/*Trending*/
+.trent-list {
+  margin: 0px;
+  padding: 0px;
+}
+.trend {
+  list-style: none;
+  line-height: 15px;
+  margin-top: 10px;
+}
+.trend .trend-title {
+  text-decoration: none;
+  color: rgb(0, 188, 212);
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.trend .trend-subtitle {
+  color: #657786;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
