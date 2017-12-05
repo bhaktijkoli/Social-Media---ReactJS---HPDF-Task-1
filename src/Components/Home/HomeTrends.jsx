@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {Card, CardHeader, CardActions, CardText, FlatButton} from 'material-ui';
+import {Card, CardHeader, CardActions, CardText, FlatButton, ListItem, List, Divider} from 'material-ui';
 
 class HomeTrends extends Component {
   constructor(props) {
@@ -11,7 +11,17 @@ class HomeTrends extends Component {
   }
   render() {
     const listTrends = this.state.trends.map((trend) =>
-    <li key={trend.name} className="trend"><a className="trend-title" href="#"><h3>#{trend.name}</h3></a><span className="trend-subtitle">{trend.posts}</span></li> );
+      <ListItem
+        key={trend.name}
+        hoverColor="transparent"
+        primaryText={
+          <span className="list-primary-text">#{trend.name}</span>
+        }
+        secondaryText={
+          <span>{trend.posts}</span>
+        }
+        secondaryTextLines={2}
+      />);
     return (
       <Card initiallyExpanded={true} >
         <CardHeader
@@ -21,10 +31,9 @@ class HomeTrends extends Component {
           showExpandableButton={true}
         />
         <CardText expandable={true} className="card-text">
-          <ul className="trent-list card-fix">
+          <List>
             {listTrends}
-
-          </ul>
+          </List>
         </CardText>
       </Card>
     );
