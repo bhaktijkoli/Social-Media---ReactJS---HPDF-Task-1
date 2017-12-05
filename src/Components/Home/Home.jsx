@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import HomeUserProfile from './HomeUserProfile'
 import HomeTrends from './HomeTrends'
+import HomeFollow from './HomeFollow'
 
 import {Paper, Avatar} from 'material-ui';
 
@@ -19,6 +20,7 @@ class Home extends Component {
             {/* Posts here */}
           </div>
           <div className="col-sm-3">
+            <HomeFollow/>
           </div>
         </div>
       </div>

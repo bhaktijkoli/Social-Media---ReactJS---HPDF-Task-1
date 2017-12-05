@@ -42,7 +42,16 @@ h3 {
 }
 
 .card-text {
-  padding-top: 0px !important;
+  padding: 0px !important;
+}
+
+.list-primary-text {
+  margin-right: -16px;
+  line-height: 20px;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Layouts */
