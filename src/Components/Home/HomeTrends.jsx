@@ -12,6 +12,7 @@ class HomeTrends extends Component {
   render() {
     const listTrends = this.state.trends.map((trend) =>
       <ListItem
+        className="list-trends"
         key={trend.name}
         hoverColor="transparent"
         primaryText={

@@ -111,3 +111,8 @@ h3 {
   font-size: 1.2em;
   color: rgb(0, 188, 212);
 }
+
+/* Trends */
+.list-trends {
+  height: 60px;
+}

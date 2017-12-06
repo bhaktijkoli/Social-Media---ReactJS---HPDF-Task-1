@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {Card, CardHeader, CardActions, CardText, FlatButton} from 'material-ui';
+import {Card, CardHeader, CardActions, CardText, FlatButton, RaisedButton } from 'material-ui';
 import {List, Subheader, ListItem, Divider, Avatar, IconMenu, MenuItem, IconButton } from 'material-ui';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 
@@ -15,15 +15,27 @@ class HomeFollow extends Component {
       suggestions: window.data.auth.suggestions
     }
   }
-
+  removeItem(e) {
+    var el = this.findAncestor(e.target, "follow-item");
+    if(el) {
+      el.className = "animated fadeOutRight";
+      setTimeout(function () {
+        el.parentNode.removeChild(el)
+      }, 1000);
+    }
+  }
+  findAncestor (el, cls) {
+    while ((el = el.parentElement) && !el.classList.contains(cls));
+    return el;
+  }
 
   render() {
     const listSuggestions = this.state.suggestions.map((s) =>
-    <div key={s.name}>
+    <div key={s.name} className="follow-item">
       <ListItem
         hoverColor="transparent"
         leftAvatar={<Avatar src={s.avatar} />}
-        rightIconButton={<IconButton><FontIcon className="material-icons">close</FontIcon></IconButton>}
+        rightIconButton={<IconButton onClick={this.removeItem.bind(this)}><FontIcon className="material-icons">close</FontIcon></IconButton>}
         primaryText={
           <div className="list-primary-text">
             <span>{s.name}</span>
@@ -31,11 +43,11 @@ class HomeFollow extends Component {
           </div>
         }
         secondaryText={
-          <FlatButton label="follow" primary={true}/>
+          <RaisedButton label="follow" primary={true}/>
         }
         secondaryTextLines={2}
       />
-       <Divider /> </div>);
+      <Divider /> </div>);
 
       return (
         <Card initiallyExpanded={true} >
