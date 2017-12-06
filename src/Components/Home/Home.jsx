@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import HomeUserProfile from './HomeUserProfile'
 import HomeTrends from './HomeTrends'
 import HomeFollow from './HomeFollow'
+import PostList from './PostList/PostList'
 
 import {Paper, Avatar} from 'material-ui';
 
@@ -17,6 +18,7 @@ class Home extends Component {
             <HomeTrends/>
           </div>
           <div className="col-sm-6">
+            <PostList/>
             {/* Posts here */}
           </div>
           <div className="col-sm-3">

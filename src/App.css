@@ -116,3 +116,11 @@ h3 {
 .list-trends {
   height: 60px;
 }
+/*Post Lsit*/
+.post-header > div {
+  width: 100%;
+  padding-right: 40px !important;
+}
+.post-header .post-right-icon {
+  float: right;
+}
