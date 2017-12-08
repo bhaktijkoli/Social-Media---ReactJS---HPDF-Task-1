@@ -25,8 +25,8 @@ class Post extends Component {
         >
           <MenuItem primaryText="Copy link to Post" />
           <MenuItem primaryText="Embed Post" />
-          <MenuItem primaryText="Mute @" />
-          <MenuItem primaryText="Block @" />
+          <MenuItem primaryText={<span>Mute @{this.props.post.address}</span>} />
+          <MenuItem primaryText={<span>Block @{this.props.post.address}</span>} />
           <MenuItem primaryText="Remove Post from timeline" />
           <MenuItem primaryText="Report Post" />
           <Divider/>
@@ -35,32 +35,29 @@ class Post extends Component {
       )
       const title = (
         <div>
-          <span>Title</span>
+          <span>{this.props.post.name}</span>
           {iconMenu}
         </div>
       )
       return (
         <div className="row">
-          <Card>
+          <Card className="post-card">
             <CardHeader
               className="post-header"
               title={title}
-              subtitle="Subtitle"
-              avatar="/images/avatar/baruto.jpg"
+              subtitle={<span>@{this.props.post.address}&nbsp;.&nbsp;{this.props.post.time}</span>}
+              avatar={this.props.post.avatar}
             />
             <CardText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-              Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-              Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+              {this.props.post.text}
             </CardText>
             <CardMedia>
-              <img src="images/uploads/maxresdefault.jpg" alt="" />
+              <img src={this.props.post.images[0]} alt="" />
             </CardMedia>
             <CardActions>
-              <FlatButton label="12" icon={<IconComment/>}/>
-              <FlatButton label="0" icon={<IconRepeat/>}/>
-              <FlatButton label="52" icon={<IconFavorite/>}/>
+              <FlatButton label={this.props.post.comments} icon={<IconComment/>}/>
+              <FlatButton label={this.props.post.repost} icon={<IconRepeat/>}/>
+              <FlatButton label={this.props.post.favorites} icon={<IconFavorite/>}/>
               <FlatButton icon={<IconChat/>}/>
             </CardActions>
           </Card>

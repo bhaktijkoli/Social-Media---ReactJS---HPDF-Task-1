@@ -14,13 +14,11 @@ class PostList extends Component {
     }
   }
   render() {
+    const listTrends = this.state.posts.map((post) =>
+    <Post key={post.name} post={post}/>);
     return (
       <div>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
+        {listTrends}
       </div>
     );
   }
