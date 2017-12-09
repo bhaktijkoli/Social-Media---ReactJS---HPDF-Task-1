@@ -5,3 +5,9 @@
 .appbar-links {
   margin-top: -5px;
 }
+
+#search-bar {
+ background-color: #fff !important;
+ position: absolute !important;
+ top: 0px;
+}

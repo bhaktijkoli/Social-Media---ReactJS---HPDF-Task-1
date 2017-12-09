@@ -54,6 +54,13 @@ h3 {
   white-space: nowrap;
 }
 
+.hidden {
+  display: none !important;
+}
+.visible {
+  display: inline-block !important;
+}
+
 /* Layouts */
 .sidebar-component {
   margin-bottom: 10px;
