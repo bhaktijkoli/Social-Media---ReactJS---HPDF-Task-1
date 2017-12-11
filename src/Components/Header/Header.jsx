@@ -88,6 +88,7 @@ class Header extends Component {
         id="main-bar"
         title={mainBar}
         showMenuIconButton={false}
+        style={{position:'fixed'}}
       />
       <AppBar
         title={searchBar}

@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-        <div>
+        <div className="content-wrapper">
           <Header/>
           <Route exact path="/" component={Home}/>
           <Route exact path="/about" component={About}/>

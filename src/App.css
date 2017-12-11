@@ -62,6 +62,9 @@ h3 {
 }
 
 /* Layouts */
+.content-wrapper {
+  margin-top: 80px;
+}
 .sidebar-component {
   margin-bottom: 10px;
 }

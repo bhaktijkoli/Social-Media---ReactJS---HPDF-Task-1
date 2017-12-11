@@ -6,8 +6,13 @@
   margin-top: -5px;
 }
 
+#main-bar {
+  top: 0px !important;
+  position: fixed !important;
+}
+
 #search-bar {
- background-color: #fff !important;
- position: absolute !important;
- top: 0px;
+  top: 0px !important;
+  position: fixed !important;
+  background-color: #fff !important;
 }

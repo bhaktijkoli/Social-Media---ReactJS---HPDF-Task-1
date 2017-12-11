@@ -9,7 +9,7 @@ import IconGif from 'material-ui/svg-icons/action/gif';
 import IconPoll from 'material-ui/svg-icons/social/poll';
 import IconLocation from 'material-ui/svg-icons/communication/location-on';
 
-const style = {
+const buttonStyle = {
   margin: 12,
 };
 
@@ -31,7 +31,7 @@ class NewPost extends Component {
             <IconButton><IconGif /></IconButton>
             <IconButton><IconPoll /></IconButton>
             <IconButton><IconLocation /></IconButton>
-            <RaisedButton className="pull-right" label="Post" primary={true} style={style} />
+            <RaisedButton className="pull-right" label="Post" primary={true} style={buttonStyle} />
           </div>
         </Paper>
 
