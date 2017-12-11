@@ -5,21 +5,26 @@ import HomeTrends from './../Home/HomeTrends'
 import HomeFollow from './../Home/HomeFollow'
 import PostList from './../Home/PostList/PostList'
 
+import SearchHeader from './SearchHeader'
+
 class Search extends Component {
   render() {
     {/* <h1>{this.props.match.params.query}</h1> */}
     return (
-      <div className="container main-content">
-        <div className="row">
-          <div className="col-sm-3">
-            <HomeTrends/>
-          </div>
-          <div className="col-sm-6">
-            <PostList/>
-            {/* Posts here */}
-          </div>
-          <div className="col-sm-3">
-            <HomeFollow/>
+      <div>
+        <SearchHeader />
+        <div className="container main-content search-content">
+          <div className="row">
+            <div className="col-sm-3">
+              <HomeTrends/>
+            </div>
+            <div className="col-sm-6">
+              <PostList/>
+              {/* Posts here */}
+            </div>
+            <div className="col-sm-3">
+              <HomeFollow/>
+            </div>
           </div>
         </div>
       </div>

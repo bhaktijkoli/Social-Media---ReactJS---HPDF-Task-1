@@ -150,3 +150,19 @@ h3 {
   width: 100%;
   display: inline-block;
 }
+
+/* Search */
+.search-content {
+  margin-top: 120px;
+}
+.search-header {
+  position: fixed;
+  top: 60px;
+  height: auto;
+  width: 100%;
+  z-index: 1000;
+}
+.search-result {
+  width: 100%;
+  min-height: 100px;
+}
