@@ -16,10 +16,10 @@ window.data = {
     ],
     suggestions: [
       {name:"Name1", address:"name1", avatar: "/images/avatar/baruto.jpg"},
-      {name:"Name1", address:"name1", avatar: "/images/avatar/baruto.jpg"},
-      {name:"Name1", address:"name1", avatar: "/images/avatar/baruto.jpg"},
-      {name:"Name1", address:"name1", avatar: "/images/avatar/baruto.jpg"},
-      {name:"Name1", address:"name1", avatar: "/images/avatar/baruto.jpg"},
+      {name:"Name2", address:"name2", avatar: "/images/avatar/sasuke.jpg"},
+      {name:"Name3", address:"name3", avatar: "/images/avatar/naruto.jpg"},
+      {name:"Name4", address:"name4", avatar: "/images/avatar/gaara.jpg"},
+      {name:"Name5", address:"name5", avatar: "/images/avatar/kakashi.jpg"},
     ]
   },
   posts: [
