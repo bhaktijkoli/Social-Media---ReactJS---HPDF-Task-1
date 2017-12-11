@@ -3,7 +3,6 @@ import { withRouter, Route } from 'react-router-dom';
 
 import Header from './Components/Header/Header.jsx';
 import Home from './Components/Home/Home.jsx';
-import About from './Components/About/About.jsx';
 import Search from './Components/Search/Search.jsx';
 
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
@@ -22,7 +21,6 @@ class App extends Component {
         <div className="content-wrapper">
           <Header/>
           <Route exact path="/" component={Home}/>
-          <Route exact path="/about" component={About}/>
           <Route exact path="/search" component={Search}/>
           <Route exact path="/search/:query" component={Search}/>
         </div>

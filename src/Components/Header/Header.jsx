@@ -4,6 +4,10 @@ import { withRouter, Link } from 'react-router-dom';
 import {AppBar, FlatButton, IconButton, IconMenu, MenuItem, Divider, Avatar} from 'material-ui';
 import {TextField} from 'material-ui';
 
+
+import IconHome from 'material-ui/svg-icons/action/home';
+import IconNotification from 'material-ui/svg-icons/social/notifications';
+import IconMail from 'material-ui/svg-icons/content/mail';
 import IconSearch from 'material-ui/svg-icons/action/search';
 import IconClose from 'material-ui/svg-icons/navigation/close';
 
@@ -55,8 +59,9 @@ class Header extends Component {
     const mainBar = (
       <div className="container">
         <div className="appbar-links">
-          <Link to="/"><FlatButton label="Home" className="appbar-btn"/></Link>
-          <Link to="/about"><FlatButton label="About" className="appbar-btn"/></Link>
+          <Link to="/"><FlatButton icon={<IconHome style={{fill:'white'}}/>} label="Home" className="appbar-btn"/></Link>
+          <Link to="/notifications"><FlatButton icon={<IconNotification  style={{fill:'white'}}/>} label="Notifications" className="appbar-btn"/></Link>
+          <Link to="/messages"><FlatButton icon={<IconMail style={{fill:'white'}}/>} label="Messages" className="appbar-btn"/></Link>
           <IconMenu className="pull-right" iconButtonElement={<IconButton className="appbar-btn"><Avatar src={this.state.user.avatar} size={40} /></IconButton>}>
           <MenuItem primaryText="Profile" leftIcon={<IconPerson/>}/>
           <MenuItem primaryText="List" leftIcon={<IconList/>}/>
