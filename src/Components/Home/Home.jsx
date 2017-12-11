@@ -10,6 +10,9 @@ import {Paper, Avatar} from 'material-ui';
 
 
 class Home extends Component {
+  componentDidMount() {
+    document.title = "Home"
+  }
   render() {
     return (
       <div className="container main-content">

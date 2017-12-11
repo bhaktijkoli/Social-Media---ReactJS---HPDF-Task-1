@@ -6,6 +6,9 @@ import HomeTrends from './Home/HomeTrends'
 import HomeFollow from './Home/HomeFollow'
 
 class Template extends Component {
+  componentDidMount() {
+    document.title = "Under construction"
+  }
   render() {
     return (
       <div className="container main-content">

@@ -5,7 +5,6 @@ import {Tabs, Tab} from 'material-ui';
 class SearchHeader extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props)
   }
   componentDidMount() {
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import HomeUserProfile from './../Home/HomeUserProfile'
 import HomeTrends from './../Home/HomeTrends'
@@ -8,8 +9,10 @@ import PostList from './../Home/PostList/PostList'
 import SearchHeader from './SearchHeader'
 
 class Search extends Component {
+  componentDidMount() {
+    document.title = "Search"
+  }
   render() {
-    {/* <h1>{this.props.match.params.query}</h1> */}
     return (
       <div>
         <SearchHeader />
@@ -32,4 +35,4 @@ class Search extends Component {
   }
 }
 
-export default Search;
+export default withRouter(Search);
