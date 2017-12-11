@@ -134,3 +134,16 @@ h3 {
 .post-card {
   width: 100%;
 }
+
+/* New Post */
+.new-post-container {
+  width: 100%;
+  min-height: 120px;
+  height: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.new-post-action {
+  width: 100%;
+  display: inline-block;
+}
