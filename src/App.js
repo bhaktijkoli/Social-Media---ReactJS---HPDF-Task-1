@@ -4,6 +4,7 @@ import { withRouter, Route } from 'react-router-dom';
 import Header from './Components/Header/Header.jsx';
 import Home from './Components/Home/Home.jsx';
 import Search from './Components/Search/Search.jsx';
+import Template from './Components/Template.jsx';
 
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -21,6 +22,8 @@ class App extends Component {
         <div className="content-wrapper">
           <Header/>
           <Route exact path="/" component={Home}/>
+          <Route exact path="/notifications" component={Template}/>
+          <Route exact path="/messages" component={Template}/>
           <Route exact path="/search" component={Search}/>
           <Route exact path="/search/:query" component={Search}/>
         </div>
