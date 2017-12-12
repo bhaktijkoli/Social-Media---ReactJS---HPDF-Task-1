@@ -8,11 +8,11 @@ window.data = {
       avatar: "/images/avatar/baruto.jpg",
     },
     trends: [
-      {name:"Trend1",posts:"112k"},
-      {name:"Trend2",posts:"112k"},
-      {name:"Trend3",posts:"112k"},
-      {name:"Trend4",posts:"112k"},
-      {name:"Trend5",posts:"112k"},
+      {name:"MaterialUI",posts:"756k"},
+      {name:"FixedNavbar",posts:"546k"},
+      {name:"FullWidthSearchBar",posts:"501k"},
+      {name:"SpecialAnimationEffects",posts:"324k"},
+      {name:"NightModeTheme",posts:"125k"},
     ],
     suggestions: [
       {name:"Name1", address:"name1", avatar: "/images/avatar/baruto.jpg"},
