@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import muiThemeable from 'material-ui/styles/muiThemeable';
 
 import {Paper, Avatar} from 'material-ui';
 
@@ -8,11 +9,12 @@ class HomeUserProfile extends Component {
     this.state = {
       user: window.data.auth.user
     }
+    console.log(this.props);
   }
   render() {
     return (
       <Paper zDepth={1} className="sidebar-component">
-        <div className="profile-info-banner"></div>
+        <div className="profile-info-banner" style={{backgroundColor:this.props.muiTheme.palette.primary1Color}}></div>
         <Avatar className="profile-avatar" src={this.state.user.avatar} size={72}/>
         <div className="profile-content">
           <center>
@@ -35,4 +37,4 @@ class HomeUserProfile extends Component {
   }
 }
 
-export default HomeUserProfile;
+export default muiThemeable()(HomeUserProfile);

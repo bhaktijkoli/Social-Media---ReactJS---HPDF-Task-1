@@ -31,9 +31,11 @@ class App extends Component {
     window.toggleTheme = () => {
       if(window.theme===0) {
         this.setState({theme: darkTheme})
+        document.body.style.backgroundColor = "darkgray"
         window.theme=1;
       } else {
         this.setState({theme: defautTheme})
+        document.body.style.backgroundColor = "aliceblue"
         window.theme=0;
       }
     };
