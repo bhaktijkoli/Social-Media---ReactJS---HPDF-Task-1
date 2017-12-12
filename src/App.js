@@ -7,6 +7,7 @@ import Search from './Components/Search/Search.jsx';
 import Template from './Components/Template.jsx';
 
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
@@ -16,10 +17,30 @@ import './css/animate.css';
 
 import './data'
 
+const darkTheme = getMuiTheme(darkBaseTheme)
+
+const defautTheme = getMuiTheme(lightBaseTheme)
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      theme: defautTheme
+    }
+    window.theme = 0;
+    window.toggleTheme = () => {
+      if(window.theme===0) {
+        this.setState({theme: darkTheme})
+        window.theme=1;
+      } else {
+        this.setState({theme: defautTheme})
+        window.theme=0;
+      }
+    };
+  }
   render() {
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+      <MuiThemeProvider muiTheme={this.state.theme}>
         <div className="content-wrapper">
           <Header/>
           <Route exact path="/" component={Home}/>

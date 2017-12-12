@@ -5,6 +5,7 @@ import HomeTrends from './HomeTrends'
 import HomeFollow from './HomeFollow'
 import NewPost from './NewPost'
 import PostList from './PostList/PostList'
+import ToggleTheme from './ToggleTheme'
 
 import {Paper, Avatar} from 'material-ui';
 
@@ -28,6 +29,7 @@ class Home extends Component {
           </div>
           <div className="col-sm-3">
             <HomeFollow/>
+            <ToggleTheme/>
           </div>
         </div>
       </div>

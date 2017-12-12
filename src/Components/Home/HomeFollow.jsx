@@ -50,7 +50,7 @@ class HomeFollow extends Component {
       <Divider /> </div>);
 
       return (
-        <Card initiallyExpanded={true} >
+        <Card zDepth={1} className="sidebar-component" initiallyExpanded={true} >
           <CardHeader
             className="card-header"
             title={<h2>Follow now</h2>}
