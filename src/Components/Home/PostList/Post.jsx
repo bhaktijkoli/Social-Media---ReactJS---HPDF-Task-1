@@ -41,7 +41,7 @@ class Post extends Component {
       )
       return (
         <div className="row">
-          <Card className="post-card">
+          <Card className="post-card animated fadeInUp">
             <CardHeader
               className="post-header"
               title={title}
