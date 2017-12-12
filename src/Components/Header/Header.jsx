@@ -83,7 +83,7 @@ class Header extends Component {
   const searchBar = (
     <div className="container">
       <TextField ref="searchInput" id="search-input" hintText="Type then hit enter to search..."  style={{width: '95%'}} inputStyle={{color:'black'}}/>
-      <IconButton className="pull-right" style={{top:'12px'}} onClick={this.hideSearch.bind(this)}><IconClose /></IconButton>
+      <IconButton className="pull-right" style={{top:'12px'}} onClick={this.hideSearch.bind(this)}><IconClose color="black"/></IconButton>
     </div>
   )
 
